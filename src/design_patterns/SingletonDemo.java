@@ -21,9 +21,9 @@ class SingletonClass {
         return "SingletonClass [data=" + data + "]";
     }
 
-    public static SingletonClass getInstance() {
+    public static SingletonClass getInstance() { // static factory method
         if (instance == null) { // no active object
-            instance = new SingletonClass();
+            instance = new SingletonClass(); // lazy initialization
         }
 
         return instance;
