@@ -30,6 +30,7 @@ class NotificationFactory {
         if (channel == null || channel.isEmpty()) {
             return null;
         }
+
         switch (channel) {
             case "SMS":
                 return new SMSNotification();
@@ -59,5 +60,7 @@ public class FactoryMethodDemo {
         NotificationFactory factory = new NotificationFactory();
         Notification notification = factory.createNotification("SMS");
         notification.notifyUser();
+
+        // How to obtain an object of Email notification using factory method?
     }
 }

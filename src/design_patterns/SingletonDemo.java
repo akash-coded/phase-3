@@ -11,22 +11,22 @@ class RegularClass {
 
 class SingletonClass {
     int data = 50;
-    private static SingletonClass instance = null;
+    private static SingletonClass instance = null; // Step-1
 
-    private SingletonClass() {
+    private SingletonClass() { // Step-2
     }
 
-    @Override
-    public String toString() {
-        return "SingletonClass [data=" + data + "]";
-    }
-
-    public static SingletonClass getInstance() { // static factory method
+    public static SingletonClass getInstance() { // Step-3
         if (instance == null) { // no active object
             instance = new SingletonClass(); // lazy initialization
         }
 
         return instance;
+    }
+
+    @Override
+    public String toString() {
+        return "SingletonClass [data=" + data + "]";
     }
 }
 
